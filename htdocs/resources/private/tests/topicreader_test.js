@@ -35,7 +35,7 @@ describe('#transformTopicObj', () => {
                     "neutral": 133,
                     "negative": 3
                 },
-                "fontSize": "size0"
+                "fontSize": "size5"
         }];
         expect(actual).to.be.eql(expected);
 
@@ -49,7 +49,7 @@ describe('#transformTopicObj', () => {
                     "neutral": 46,
                     "positive": 2
                 },
-                "fontSize": "size0"
+                "fontSize": "size5"
         }];
         expect(actual).to.be.eql(expected);
 
@@ -64,7 +64,7 @@ describe('#transformTopicObj', () => {
                     "neutral": 133,
                     "negative": 3
                 },
-                "fontSize": "size0"
+                "fontSize": "size5"
         },{
                 "label": "DJ",
                 "sentimentScore": 54,
@@ -88,39 +88,43 @@ describe('#mapVolumeToFontsize', () => {
 
     it('should take an object with an array of topics, and return an object mapping a volume to a font size', () => {
         let actual = TopicReader.mapVolumeToFontsize(testTopic1);
-        let expected = [];
-
-        expected['size0'] = 135;
-        expected['size1'] = 108;
-        expected['size2'] = 81;
-        expected['size3'] = 54;
-        expected['size4'] = 27;
-        expected['size5'] = 0;
-
+        let expected = [0,27,54,81,108,135];
         expect(actual).to.eql(expected);
 
         actual = TopicReader.mapVolumeToFontsize(testTopic2);
-
-        expected['size0'] = 40;
-        expected['size1'] = 32;
-        expected['size2'] = 24;
-        expected['size3'] = 16;
-        expected['size4'] = 8;
-        expected['size5'] = 0;
-
+        expected = [0, 8, 16, 24, 32, 40];
         expect(actual).to.be.eql(expected);
 
         actual = TopicReader.mapVolumeToFontsize(testTopics);
-
-        expected['size0'] = 143;
-        expected['size1'] = 124;
-        expected['size2'] = 105;
-        expected['size3'] = 86;
-        expected['size4'] = 67;
-        expected['size5'] = 48;
-
+        expected = [48, 67, 86, 105, 124, 143];
         expect(actual).to.be.eql(expected);
     });
+
+    it('should take an argument, skew, and return a result weighted to the left or right of the spectrum', () => {
+        let actual = TopicReader.mapVolumeToFontsize(testTopic1, 'left');
+        let expected = [0, 8, 16, 32, 65, 147];
+        expect(actual).to.eql(expected);
+
+        actual = TopicReader.mapVolumeToFontsize(testTopic2, 'left');
+        expected = [0, 2, 4, 8, 17, 41];
+        expect(actual).to.eql(expected);
+
+        actual = TopicReader.mapVolumeToFontsize(testTopics, 'left');
+        expected = [48, 53, 58, 69, 92, 150];
+        expect(actual).to.eql(expected);
+
+        actual = TopicReader.mapVolumeToFontsize(testTopic1, 'right');
+        expected = [0, 82, 115, 131, 139, 147];
+        expect(actual).to.eql(expected);
+
+        actual = TopicReader.mapVolumeToFontsize(testTopic2, 'right');
+        expected = [0, 24, 33, 37, 39, 41];
+        expect(actual).to.eql(expected);
+
+        actual = TopicReader.mapVolumeToFontsize(testTopics, 'right');
+        expected = [48, 106, 129, 140, 145, 150];
+        expect(actual).to.eql(expected);
+    })
 });
 
 describe('#getHighestVolume and #getLowestVolume', () => {
