@@ -1,0 +1,12 @@
+@import 'utilities/normalize';
+@import 'utilities/grid';
+
+#word-cloud {
+    text-align: center;
+}
+span {
+    &.size0 {
+        font-size: 3rem;
+        margin: 0 15px;
+    }
+}

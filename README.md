@@ -26,10 +26,14 @@ $ npm -v
 ```
 
 ### Installing the node dependencies
-After installing node on your local machine, navigate to the root directory of this project and run:
+After installing node on your local machine, navigate to the root directory of this project and run
 `$ npm install`
 
 This will download the dependencies needed for the project to work correctly.
+
+If deploying to a production server, run
+`$ npm install --production`
+Instead to avoid installing all of the devDependencies.
 
 ## Compiling Sass and Js
 Javascript and Sass files are compiled, transpiled and minified using gulp. If you've made any changes to the CSS, you will need to run:
