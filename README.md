@@ -1,4 +1,4 @@
-# topic-word-cloud
+# Topic World Cloud
 
 ## Installation
 
@@ -36,7 +36,7 @@ If deploying to a production server, run
 Instead to avoid installing all of the devDependencies.
 
 ## Compiling Sass and Js
-Javascript and Sass files are compiled, transpiled and minified using gulp. If you've made any changes to the CSS, you will need to run:
+Javascript and Sass files are compiled, transpiled and minified using gulp. If you've made any changes to the CSS, you will need to run
 
 `$ gulp build`
 
@@ -45,8 +45,9 @@ before you can see them
 ### BrowserSync
 This project is also set up to use Browsersync. This will watch all the HTML, SCSS and JS files that you're working on and automatically compile and refresh the view in the browser, immediately showing you changes you make after saving without having to manually compile and refresh the browser.
 
-This can be run by using:
-`$ gulp build`
+This can be run by using
+
+`$ gulp serve`
 
 That will host the server on:
 http://localhost:3000
@@ -67,4 +68,4 @@ To run the tests, simply use:
 to see the results in your terminal.
 
 Alternatively, if you'd prefer to run the test files individually, this can be done using:
-`mocha ./htdocs\resources\private\tests\<name of test file>.js`
+`mocha ./htdocs/resources/private/tests/<name of test file>.js`
