@@ -1,4 +1,4 @@
-# topic-word-cloud
+# Topic World Cloud
 
 ## Installation
 
@@ -67,4 +67,4 @@ To run the tests, simply use:
 to see the results in your terminal.
 
 Alternatively, if you'd prefer to run the test files individually, this can be done using:
-`mocha ./htdocs\resources\private\tests\<name of test file>.js`
+`mocha ./htdocs/resources/private/tests/<name of test file>.js`
