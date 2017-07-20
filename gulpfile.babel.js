@@ -4,6 +4,7 @@ const gulp = require('gulp')
     , browserSync = require('browser-sync').create()
     , browserify = require('browserify')
     , babel = require('babelify')
+    , runSequence = require('run-sequence')
     , sass = require('gulp-sass')
     , source = require('vinyl-source-stream')
     , buffer = require('vinyl-buffer')
@@ -49,3 +50,14 @@ gulp.task('serve', ['build:js', 'build:sass'], () => {
     gulp.watch('htdocs/resources/public/js/*.js', ['build:js']);
     gulp.watch("htdocs/*.html").on('change', browserSync.reload);
 });
+
+// Compile all assets
+gulp.task('build', () => {
+    runSequence(
+        'build:js'
+      , 'build:sass'
+    );
+});
+
+// Default task is build
+gulp.task('default', ['build'])
