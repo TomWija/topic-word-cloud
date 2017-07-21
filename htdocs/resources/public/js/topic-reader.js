@@ -99,6 +99,19 @@ const TopicReader = {
     getLowestVolume: function(topics) {
         return topics.length <= 1 ? 0 : Math.min.apply(Math, topics.map((topic) => {return topic.volume}));
     },
+
+    /**
+     * Shuffles array in place.
+     * @param {Array} a items The array containing the items.
+     * @returns {Array} array containing shuffled items
+     */
+    shuffle: function(a) {
+        for (let i = a.length; i; i--) {
+            let j = Math.floor(Math.random() * i);
+            [a[i - 1], a[j]] = [a[j], a[i - 1]];
+        }
+        return a;
+    }
 }
 
 module.exports = TopicReader;

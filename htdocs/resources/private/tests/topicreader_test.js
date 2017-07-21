@@ -4,7 +4,8 @@ const expect = require('chai').expect
     , TopicReader = require('../../public/js/topic-reader.js')
     , testTopic1 = require('./test-resources/test-topic.json')
     , testTopic2 = require('./test-resources/test-topic2.json')
-    , testTopics = require('./test-resources/test-topics.json');
+    , testTopics = require('./test-resources/test-topics.json')
+    , topics = require('../../public/js/topics/topics.json');
 
 describe('TopicReader', () => {
     it('should exist', () => {
@@ -157,4 +158,28 @@ describe('#getHighestVolume and #getLowestVolume', () => {
         expect(TopicReader.getLowestVolume([{"volume": 10}])).to.equal(0);
         expect(TopicReader.getHighestVolume([{"volume": 10}])).to.equal(10);
     });
+});
+
+describe('#shuffle', () =>{
+    it('should return an array', () => {
+        let input = TopicReader.transformTopicObj(testTopics)
+          , output = TopicReader.shuffle(input);
+
+        expect(output).to.be.instanceOf(Array);
+    });
+
+    it('should not need to be assigned to a new variable', () => {
+        let input = TopicReader.transformTopicObj(topics)
+          , output = TopicReader.shuffle(input);
+
+        expect(input).to.eql(output);
+    });
+
+    it('should contain the same objects as what is put in', () => {
+        let input = TopicReader.transformTopicObj(topics)
+          , comparison = TopicReader.transformTopicObj(topics);
+
+        expect(input).to.have.deep.members(comparison);
+    });
+
 });
