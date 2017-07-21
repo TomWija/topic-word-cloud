@@ -65,6 +65,7 @@ p {
 
 .container {
   width: 90%;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto; }
   @media only screen and (min-width: 33.75em) {
@@ -559,31 +560,61 @@ template {
 
 .positive {
   color: green; }
+  .positive:hover {
+    color: #00b300; }
 
 .negative {
   color: red; }
+  .negative:hover {
+    color: #ff9999; }
 
 .neutral {
   color: grey; }
+  .neutral:hover {
+    color: #b3b3b3; }
 
 .size0 {
   font-size: 1rem; }
 
 .size1 {
-  font-size: 2rem; }
+  font-size: 1.5rem; }
 
 .size2 {
-  font-size: 3rem; }
+  font-size: 2.0rem; }
 
 .size3 {
-  font-size: 4rem; }
+  font-size: 2.5rem; }
 
 .size4 {
-  font-size: 5rem; }
+  font-size: 3rem; }
 
 .size5 {
-  font-size: 6rem; }
+  font-size: 3.5rem; }
 
 span {
-  margin: 15px;
+  vertical-align: middle;
+  margin: 5px;
   line-height: 60px; }
+
+@media (min-width: 1025px) {
+  .size0 {
+    font-size: 1rem; }
+  .size1 {
+    font-size: 2rem; }
+  .size2 {
+    font-size: 3rem; }
+  .size3 {
+    font-size: 4rem; }
+  .size4 {
+    font-size: 5rem; }
+  .size5 {
+    font-size: 6rem; }
+  span {
+    margin: 15px;
+    line-height: 100px; } }
+
+#word-cloud span:hover, #word-cloud span.focused {
+  cursor: pointer; }
+
+#word-cloud span.focused {
+  border-bottom: 2px solid; }

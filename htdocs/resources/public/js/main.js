@@ -1,3 +1,5 @@
-const setupWordCloud = require('./word-cloud.js');
+const renderWordCloud = require("./setup/renderwordcloud.js"),
+    setupClickEvents = require("./setup/setupclickevents.js");
 
-setupWordCloud();
+renderWordCloud();
+setupClickEvents();

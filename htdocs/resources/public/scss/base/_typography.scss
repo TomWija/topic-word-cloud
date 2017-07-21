@@ -1,39 +1,78 @@
 .positive {
     color: green;
+    &:hover {
+        color: lighten(green, 10%);
+    }
 }
 
 .negative {
     color: red;
+    &:hover {
+        color: lighten(red, 30%);
+    }
 }
 
 .neutral {
     color: grey;
+    &:hover {
+        color: lighten(grey, 20%);
+    }
 }
-
 .size {
     &0{
         font-size: 1rem;
     }
 
     &1{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     &2{
-        font-size: 3rem;
+        font-size: 2.0rem;
     }
     &3{
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
 
     &4{
-        font-size: 5rem;
+        font-size: 3rem;
     }
     &5{
-        font-size: 6rem;
+        font-size: 3.5rem;
     }
 }
 
 span {
-    margin: 15px;
+    vertical-align: middle;
+    margin: 5px;
     line-height: 60px;
+}
+
+@media (min-width: 1025px) {
+    .size {
+        &0{
+            font-size: 1rem;
+        }
+
+        &1{
+            font-size: 2rem;
+        }
+        &2{
+            font-size: 3rem;
+        }
+        &3{
+            font-size: 4rem;
+        }
+
+        &4{
+            font-size: 5rem;
+        }
+        &5{
+            font-size: 6rem;
+        }
+    }
+
+    span {
+        margin: 15px;
+        line-height: 100px;
+    }
 }

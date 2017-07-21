@@ -1,0 +1,10 @@
+#word-cloud {
+    span {
+        &:hover, &.focused {
+            cursor: pointer;
+        }
+        &.focused {
+            border-bottom: 2px solid;
+        }
+    }
+}
