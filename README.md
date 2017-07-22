@@ -35,12 +35,31 @@ If deploying to a production server, run
 `$ npm install --production`
 Instead to avoid installing all of the devDependencies.
 
+### Styles and Javascript
 ## Compiling Sass and Js
 Javascript and Sass files are compiled, transpiled and minified using gulp. If you've made any changes to the CSS, you will need to run
 
 `$ gulp build`
 
 before you can see them
+
+## Browser Compatibility
+This project was designed with keeping the following browsers supported (ordered by usage data).
+```
+Chrome (35+)          - 42%
+Safari (7+)           - 23%
+IE11                  - 15%
+Firefox (29+)         - 15%
+IE10                  - 2.5%
+IE9                   - 2%
+Other                 - 0.5%
+```
+To this end, autoprefixer is being used when compiling SCSS into CSS to ensure that any rules that need the `-ms`, `-webkit`, `-moz` etc. prefixes are given them when being compiled. This also means you can write the CSS without needing to specify these, leading to cleaner, easier to read code.
+
+We're also using the babel transpiler with the latest compatibility settings downloaded, allowing you to code using ES6+ practices without worrying about compatibility with older browsers.
+
+## Code Style
+This project comes packaged with an `.eslintrc` allowing you to use eslint in your text-editor of choice to help keep any code you write to project conventions easily.
 
 ### BrowserSync
 This project is also set up to use Browsersync. This will watch all the HTML, SCSS and JS files that you're working on and automatically compile and refresh the view in the browser, immediately showing you changes you make after saving without having to manually compile and refresh the browser.
