@@ -1,0 +1,13 @@
+.full-height {
+    @media(min-width: 768px) {
+        height: 100%;
+    }
+}
+
+.flex-wrapper {
+    display: flex;
+
+    &__column {
+        flex-direction: column;
+    }
+}

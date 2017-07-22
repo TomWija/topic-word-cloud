@@ -1,13 +1,8 @@
 #word-cloud {
     .word-cloud__topic {
-        margin: 5px;
-        line-height: 60px;
+        margin: 10px;
+        line-height: 70px;
         vertical-align: middle;
-
-        @media (min-width: 1025px) {
-            margin: 15px;
-            line-height: 100px;
-        }
 
         &:hover, &.focused {
             cursor: pointer;

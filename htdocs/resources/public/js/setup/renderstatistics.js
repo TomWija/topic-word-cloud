@@ -9,7 +9,7 @@ module.exports = {
             topic = TopicReader.findTopicById(topicsObj.topics, $(this).data("id"));
         });
 
-        $("#label").text(topic ? topic.label : "");
+        $("#label").text(topic ? "\"" + topic.label + "\"" : "");
         $("#total-mentions").text(topic ? topic.volume : 0);
         $("#positive-mentions").text(topic ? topic.sentimentBreakdown.positive : 0);
         $("#neutral-mentions").text(topic ? topic.sentimentBreakdown.neutral : 0);

@@ -54,8 +54,7 @@ p {
 
 .center {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: auto; }
 
 .justify {
   text-align: justify; }
@@ -65,7 +64,7 @@ p {
 
 .container {
   width: 90%;
-  max-width: 1440px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto; }
   @media only screen and (min-width: 33.75em) {
@@ -81,7 +80,7 @@ p {
 
 .row [class^="col"] {
   float: left;
-  padding: 0.5rem 2%;
+  padding: 0 2%;
   min-height: 0.125rem; }
 
 .row::after {
@@ -579,42 +578,37 @@ template {
   font-size: 1rem; }
 
 .size1 {
-  font-size: 1.5rem; }
+  font-size: 1.75rem; }
 
 .size2 {
-  font-size: 2.0rem; }
+  font-size: 2.25rem; }
 
 .size3 {
-  font-size: 2.5rem; }
+  font-size: 2.75rem; }
 
 .size4 {
-  font-size: 3rem; }
+  font-size: 3.25rem; }
 
 .size5 {
-  font-size: 3.5rem; }
+  font-size: 3.75rem; }
 
-@media (min-width: 1025px) {
-  .size0 {
-    font-size: 1rem; }
-  .size1 {
-    font-size: 2rem; }
-  .size2 {
-    font-size: 3rem; }
-  .size3 {
-    font-size: 4rem; }
-  .size4 {
-    font-size: 5rem; }
-  .size5 {
-    font-size: 6rem; } }
+@media (min-width: 768px) {
+  .full-height {
+    height: 100%; } }
+
+.flex-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .flex-wrapper__column {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
 
 #word-cloud .word-cloud__topic {
-  margin: 5px;
-  line-height: 60px;
+  margin: 10px;
+  line-height: 70px;
   vertical-align: middle; }
-  @media (min-width: 1025px) {
-    #word-cloud .word-cloud__topic {
-      margin: 15px;
-      line-height: 100px; } }
   #word-cloud .word-cloud__topic:hover, #word-cloud .word-cloud__topic.focused {
     cursor: pointer; }
   #word-cloud .word-cloud__topic.focused {

@@ -7,6 +7,10 @@ module.exports = (topics) => {
     TopicReader.shuffle(processedTopics);
 
     processedTopics.forEach((topic) => {
+
+        // Format Label to keep spaced words on same level
+        topic.label = topic.label.replace(/ /gi, "&nbsp;");
+
         $wordCloudColumn.append(`<span class="${topic.fontSize} ${topic.sentimentOverall} word-cloud__topic" data-id="${topic.id}">${topic.label}</span> `);
     });
 };
