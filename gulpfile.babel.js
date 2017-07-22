@@ -8,7 +8,8 @@ const gulp = require("gulp"),
     sass = require("gulp-sass"),
     source = require("vinyl-source-stream"),
     buffer = require("vinyl-buffer"),
-    uglify = require("gulp-uglify");
+    uglify = require("gulp-uglify"),
+    autoprefixer = require("gulp-autoprefixer");
 
 // Paths
 
@@ -36,6 +37,15 @@ gulp.task("build:js", () => {
 gulp.task("build:sass", () => {
     return gulp.src(sassPath + "main.scss")
         .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: [
+                "Chrome >= 35",
+                "Safari >= 7",
+                "Firefox >= 29",
+                "ie > 9"
+            ],
+            cascade: false
+        }))
         .pipe(gulp.dest(compiledPath + "css/"))
         .pipe(browserSync.stream());
 });
