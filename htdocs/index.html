@@ -8,15 +8,23 @@
 
     <div class="container">
         <div class="row">
-            <div id="word-cloud" class="col-8 center">
-
+            <div class="col-8">
+                <h1>My Topics Challenge</h1>
+                <div id="word-cloud" class="center"></div>
             </div>
-            <div id="label-metadata" class="col-4 center">
-                <p>Total: <span id="total-mentions"></span></p>
-                <p>Positive: <span id="positive-mentions"></span></p>
-                <p>Neutral: <span id="neutral-mentions"></span></p>
-                <p>Negative: <span id="negative-mentions"></span></p>
-                <p><a href="#" id="clear-words-btn">Clear Words</a></p>
+            <div class="col4">
+                <div id="label-metadata" class="center">
+                    <p>Information on topic: <span id="label"></span></p>
+
+                    <p>Total Mentions: <span id="total-mentions">0</span></p>
+
+                    <p>
+                        Positive Mentions: <span id="positive-mentions">0</span><br>
+                        Neutral Mentions: <span id="neutral-mentions">0</span><br>
+                        Negative Mentions: <span id="negative-mentions">0</span><br>
+                    </p>
+
+                </div>
             </div>
         </div>
     </div>
