@@ -41,12 +41,6 @@
     }
 }
 
-span {
-    vertical-align: middle;
-    margin: 5px;
-    line-height: 60px;
-}
-
 @media (min-width: 1025px) {
     .size {
         &0{
@@ -69,10 +63,5 @@ span {
         &5{
             font-size: 6rem;
         }
-    }
-
-    span {
-        margin: 15px;
-        line-height: 100px;
     }
 }

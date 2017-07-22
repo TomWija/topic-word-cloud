@@ -13,13 +13,13 @@
     "gulp-uglify": "^3.0.0",
     "mocha": "^3.4.2",
     "vinyl-buffer": "^1.0.0",
+    "run-sequence": "^2.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
     "tests": "mocha htdocs/resources/private/tests/*.js --require babel-register || true"
   },
   "dependencies": {
-    "jquery": "^3.2.1",
-    "run-sequence": "^2.0.0"
+    "jquery": "^3.2.1"
   }
 }

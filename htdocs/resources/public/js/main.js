@@ -1,5 +1,8 @@
-const renderWordCloud = require("./setup/renderwordcloud.js"),
-    setupClickEvents = require("./setup/setupclickevents.js");
+window.$ = window.jQuery = require("jquery");
 
-renderWordCloud();
-setupClickEvents();
+const renderWordCloud = require("./setup/renderwordcloud.js"),
+    setupClickEvents = require("./setup/setupclickevents.js"),
+    topics = require("./topics/topics.json");
+
+renderWordCloud(topics);
+setupClickEvents(topics);

@@ -43,6 +43,8 @@ const TopicReader = {
 
                 if(topic) {
                     if(!topic.sentiment.negative) topic.sentiment.negative = 0;
+                    if(!topic.sentiment.neutral) topic.sentiment.neutral = 0;
+                    if(!topic.sentiment.positive) topic.sentiment.positive = 0;
 
                     return {
                         "label": topic.label,

@@ -591,11 +591,6 @@ template {
 .size5 {
   font-size: 3.5rem; }
 
-span {
-  vertical-align: middle;
-  margin: 5px;
-  line-height: 60px; }
-
 @media (min-width: 1025px) {
   .size0 {
     font-size: 1rem; }
@@ -608,13 +603,17 @@ span {
   .size4 {
     font-size: 5rem; }
   .size5 {
-    font-size: 6rem; }
-  span {
-    margin: 15px;
-    line-height: 100px; } }
+    font-size: 6rem; } }
 
-#word-cloud span:hover, #word-cloud span.focused {
-  cursor: pointer; }
-
-#word-cloud span.focused {
-  border-bottom: 2px solid; }
+#word-cloud .word-cloud__topic {
+  margin: 5px;
+  line-height: 60px;
+  vertical-align: middle; }
+  @media (min-width: 1025px) {
+    #word-cloud .word-cloud__topic {
+      margin: 15px;
+      line-height: 100px; } }
+  #word-cloud .word-cloud__topic:hover, #word-cloud .word-cloud__topic.focused {
+    cursor: pointer; }
+  #word-cloud .word-cloud__topic.focused {
+    border-bottom: 2px solid; }
