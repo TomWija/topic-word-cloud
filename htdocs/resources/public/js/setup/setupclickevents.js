@@ -1,7 +1,9 @@
-const renderStatistics = require("./renderstatistics.js").renderWords;
+const renderStatistics = require("./renderstatistics.js");
 
+/**
+ * Sets up the event that allows a user to pick a word in the word cloud. 
+ */
 module.exports = (topics) => {
-    /* Render information about clicked word */
     $("#word-cloud span").on("click", function() {
         if ($(this).hasClass("focused")) {
             $(this).removeClass("focused");

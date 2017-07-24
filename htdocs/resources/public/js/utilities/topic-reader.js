@@ -42,7 +42,7 @@ const TopicReader = {
                 let topic = $.grep(topics, (item) => item.id == id); //topics.find((item) => item.id == id);
 
                 if(topic.length) {
-                    topic = topic[0]
+                    topic = topic[0];
                 } else {
                     return false;
                 }

@@ -15,21 +15,22 @@ setupClickEvents(topics);
 
 var TopicReader = require("../utilities/topic-reader.js");
 
-module.exports = {
-    renderWords: function renderWords(topicsObj) {
+/**
+ * Renders the statistics for any chosen labels in the word-cloud.
+ */
+module.exports = function (topicsObj) {
 
-        var topic = void 0;
-        /* Render Statistics for chosen Labels */
-        $("#word-cloud .focused").each(function () {
-            topic = TopicReader.findTopicById(topicsObj.topics, $(this).data("id"));
-        });
+    var topic = void 0;
 
-        $("#label").text(topic ? "\"" + topic.label + "\"" : "");
-        $("#total-mentions").text(topic ? topic.volume : 0);
-        $("#positive-mentions").text(topic ? topic.sentimentBreakdown.positive : 0);
-        $("#neutral-mentions").text(topic ? topic.sentimentBreakdown.neutral : 0);
-        $("#negative-mentions").text(topic ? topic.sentimentBreakdown.negative : 0);
-    }
+    $("#word-cloud .focused").each(function () {
+        topic = TopicReader.findTopicById(topicsObj.topics, $(this).data("id"));
+    });
+
+    $("#label").text(topic ? "\"" + topic.label + "\"" : "");
+    $("#total-mentions").text(topic ? topic.volume : 0);
+    $("#positive-mentions").text(topic ? topic.sentimentBreakdown.positive : 0);
+    $("#neutral-mentions").text(topic ? topic.sentimentBreakdown.neutral : 0);
+    $("#negative-mentions").text(topic ? topic.sentimentBreakdown.negative : 0);
 };
 
 },{"../utilities/topic-reader.js":6}],3:[function(require,module,exports){
@@ -37,6 +38,11 @@ module.exports = {
 
 var TopicReader = require("../utilities/topic-reader.js");
 
+/**
+ * Used to render the word cloud itself, assigning the relevant classes to the
+ * words themselves. Also shuffles the topics around so the word cloud is rendered
+ * differently on every page load.
+ */
 module.exports = function (topics) {
     var $wordCloudColumn = $("#word-cloud"),
         processedTopics = TopicReader.transformTopicObj(topics, "left");
@@ -44,7 +50,6 @@ module.exports = function (topics) {
     TopicReader.shuffle(processedTopics);
 
     processedTopics.forEach(function (topic) {
-
         // Format Label to keep spaced words on same level
         topic.label = topic.label.replace(/ /gi, "&nbsp;");
 
@@ -55,10 +60,12 @@ module.exports = function (topics) {
 },{"../utilities/topic-reader.js":6}],4:[function(require,module,exports){
 "use strict";
 
-var renderStatistics = require("./renderstatistics.js").renderWords;
+var renderStatistics = require("./renderstatistics.js");
 
+/**
+ * Sets up the event that allows a user to pick a word in the word cloud. 
+ */
 module.exports = function (topics) {
-    /* Render information about clicked word */
     $("#word-cloud span").on("click", function () {
         if ($(this).hasClass("focused")) {
             $(this).removeClass("focused");
