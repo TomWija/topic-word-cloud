@@ -59,7 +59,7 @@ var renderStatistics = require("./renderstatistics.js").renderWords;
 
 module.exports = function (topics) {
     /* Render information about clicked word */
-    $("#word-cloud span").on('click', function () {
+    $("#word-cloud span").on("click", function () {
         if ($(this).hasClass("focused")) {
             $(this).removeClass("focused");
         } else {
@@ -1909,9 +1909,15 @@ var TopicReader = {
     findTopicById: function findTopicById(topics, id) {
         try {
             if (topics && id) {
-                var topic = topics.find(function (item) {
+                var topic = $.grep(topics, function (item) {
                     return item.id == id;
-                });
+                }); //topics.find((item) => item.id == id);
+
+                if (topic.length) {
+                    topic = topic[0];
+                } else {
+                    return false;
+                }
 
                 if (topic) {
                     if (!topic.sentiment.negative) topic.sentiment.negative = 0;
@@ -1928,6 +1934,7 @@ var TopicReader = {
             }
             return false;
         } catch (error) {
+            console.log(error);
             return false;
         }
     },

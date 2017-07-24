@@ -39,7 +39,13 @@ const TopicReader = {
     findTopicById: function(topics, id) {
         try {
             if(topics && id) {
-                const topic = topics.find((item) => item.id == id);
+                let topic = $.grep(topics, (item) => item.id == id); //topics.find((item) => item.id == id);
+
+                if(topic.length) {
+                    topic = topic[0]
+                } else {
+                    return false;
+                }
 
                 if(topic) {
                     if(!topic.sentiment.negative) topic.sentiment.negative = 0;
