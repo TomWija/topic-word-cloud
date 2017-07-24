@@ -28,7 +28,7 @@ gulp.task("build:js", () => {
         .bundle()
         .pipe(source("main.js"))
         .pipe(buffer())
-        .pipe(uglify())
+//        .pipe(uglify())
         .pipe(gulp.dest(compiledPath + "js/"))
         .pipe(browserSync.stream());
 });
