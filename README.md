@@ -1,11 +1,11 @@
 # Topic World Cloud
 
-## Installation
+# Installation
 
 Begin by cloning the project to your local machine and navigating to the directory
 `$ git clone git@github.com:TomWija/topic-word-cloud.git && cd topic-word-cloud`
 
-### Installing Node
+## Installing Node
 
 This project requires you to have the latest versions of Node and NPM installed on your system.
 
@@ -25,7 +25,7 @@ $ node -v
 $ npm -v
 ```
 
-### Installing the node dependencies
+## Installing the node dependencies
 After installing node on your local machine, navigate to the root directory of this project and run
 `$ npm install`
 
@@ -35,7 +35,7 @@ If deploying to a production server, run
 `$ npm install --production`
 Instead to avoid installing all of the devDependencies.
 
-### Styles and Javascript
+# Styles and Javascript
 ## Compiling Sass and Js
 Javascript and Sass files are compiled, transpiled and minified using gulp. If you've made any changes to the CSS, you will need to run
 
@@ -61,7 +61,7 @@ We're also using the babel transpiler with the latest compatibility settings dow
 ## Code Style
 This project comes packaged with an `.eslintrc` allowing you to use eslint in your text-editor of choice to help keep any code you write to project conventions easily.
 
-### BrowserSync
+## BrowserSync
 This project is also set up to use Browsersync. This will watch all the HTML, SCSS and JS files that you're working on and automatically compile and refresh the view in the browser, immediately showing you changes you make after saving without having to manually compile and refresh the browser.
 
 This can be run by using
@@ -73,7 +73,7 @@ http://localhost:3000
 
 while also providing tools at: http://localhost:3001
 
-## Testing
+# Testing
 
 ## Unit Testing
 For testing, we're using Mocha and Chai test frameworks.
@@ -91,7 +91,7 @@ to see the results in your terminal.
 Alternatively, if you'd prefer to run the test files individually, this can be done using:
 `mocha ./htdocs/resources/private/tests/<name of test file>.js`
 
-## Cross-browser testings
+## Cross-browser testing
 For the cross browser testing I used browserstack, checking each of the following browsers to ensure the word cloud worked and displayed as expected:
 ```
 Chrome 35          
