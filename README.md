@@ -74,6 +74,8 @@ http://localhost:3000
 while also providing tools at: http://localhost:3001
 
 ## Testing
+
+## Unit Testing
 For testing, we're using Mocha and Chai test frameworks.
 
 The tests for the project are all stored in:
@@ -88,3 +90,17 @@ to see the results in your terminal.
 
 Alternatively, if you'd prefer to run the test files individually, this can be done using:
 `mocha ./htdocs/resources/private/tests/<name of test file>.js`
+
+## Cross-browser testings
+For the cross browser testing I used browserstack, checking each of the following browsers to ensure the word cloud worked and displayed as expected:
+```
+Chrome 35          
+Safari 7           
+IE11                  
+Firefox 29         
+IE10                  
+IE9                  
+Chrome for Android (Latest Version, On google pixel)
+Safari for Iphone (Latest Version, on iPhone 6s)
+Other                 
+```
