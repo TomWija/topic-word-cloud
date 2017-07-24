@@ -5,6 +5,23 @@
 Begin by cloning the project to your local machine and navigating to the directory
 `$ git clone git@github.com:TomWija/topic-word-cloud.git && cd topic-word-cloud`
 
+## Quick steps
+These are the quickest steps for installing/setting up this project. Assuming Node is already installed and you're on linux/Mac
+```
+$ git clone git@github.com:TomWija/topic-word-cloud.git && cd topic-word-cloud
+$ npm install
+$ gulp build
+```
+
+You can then serve the application using browsersync by running
+```
+$ gulp serve
+```
+
+Or you can just open the `index.html` file.
+
+For a detailed breakdown on what you need to do, how the project works and how to test to project, see below.
+
 ## Installing Node
 
 This project requires you to have the latest versions of Node and NPM installed on your system.
