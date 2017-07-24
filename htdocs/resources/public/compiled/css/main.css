@@ -605,11 +605,20 @@ template {
     -ms-flex-direction: column;
     flex-direction: column; }
 
-#word-cloud .word-cloud__topic {
-  margin: 10px;
-  line-height: 70px;
-  vertical-align: middle; }
-  #word-cloud .word-cloud__topic:hover, #word-cloud .word-cloud__topic.focused {
-    cursor: pointer; }
-  #word-cloud .word-cloud__topic.focused {
-    border-bottom: 2px solid; }
+#word-cloud {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  #word-cloud .word-cloud__topic {
+    margin: 10px;
+    line-height: 70px;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    #word-cloud .word-cloud__topic:hover, #word-cloud .word-cloud__topic.focused {
+      cursor: pointer; }
+    #word-cloud .word-cloud__topic.focused {
+      border-bottom: 2px solid; }

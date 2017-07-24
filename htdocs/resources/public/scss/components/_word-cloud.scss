@@ -1,8 +1,10 @@
 #word-cloud {
+    user-select: none;
     .word-cloud__topic {
         margin: 10px;
         line-height: 70px;
         vertical-align: middle;
+        user-select: none;
 
         &:hover, &.focused {
             cursor: pointer;
