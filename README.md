@@ -10,12 +10,12 @@ These are the quickest steps for installing/setting up this project. Assuming No
 ```
 $ git clone git@github.com:TomWija/topic-word-cloud.git && cd topic-word-cloud
 $ npm install
-$ gulp build
+$ ./node_modules/.bin/gulp build
 ```
 
 You can then serve the application using browsersync by running
 ```
-$ gulp serve
+$ ./node_modules/.bin/gulp serve
 ```
 
 Or you can just open the `index.html` file.
@@ -56,7 +56,7 @@ Instead to avoid installing all of the devDependencies.
 ## Compiling Sass and Js
 Javascript and Sass files are compiled, transpiled and minified using gulp. If you've made any changes to the CSS, you will need to run
 
-`$ gulp build`
+`$ ./node_modules/.bin/gulp build`
 
 before you can see them
 
@@ -83,7 +83,7 @@ This project is also set up to use Browsersync. This will watch all the HTML, SC
 
 This can be run by using
 
-`$ gulp serve`
+`$ ./node_modules/.bin/gulp serve`
 
 That will host the server on:
 http://localhost:3000
