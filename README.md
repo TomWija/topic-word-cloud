@@ -5,6 +5,23 @@
 Begin by cloning the project to your local machine and navigating to the directory
 `$ git clone git@github.com:TomWija/topic-word-cloud.git && cd topic-word-cloud`
 
+## Quick steps
+These are the quickest steps for installing/setting up this project. Assuming Node is already installed and you're on linux/Mac
+```
+$ git clone git@github.com:TomWija/topic-word-cloud.git && cd topic-word-cloud
+$ npm install
+$ ./node_modules/.bin/gulp build
+```
+
+You can then serve the application using browsersync by running
+```
+$ ./node_modules/.bin/gulp serve
+```
+
+Or you can just open the `index.html` file.
+
+For a detailed breakdown on what you need to do, how the project works and how to test to project, see below.
+
 ## Installing Node
 
 This project requires you to have the latest versions of Node and NPM installed on your system.
@@ -39,7 +56,7 @@ Instead to avoid installing all of the devDependencies.
 ## Compiling Sass and Js
 Javascript and Sass files are compiled, transpiled and minified using gulp. If you've made any changes to the CSS, you will need to run
 
-`$ gulp build`
+`$ ./node_modules/.bin/gulp build`
 
 before you can see them
 
@@ -66,7 +83,7 @@ This project is also set up to use Browsersync. This will watch all the HTML, SC
 
 This can be run by using
 
-`$ gulp serve`
+`$ ./node_modules/.bin/gulp serve`
 
 That will host the server on:
 http://localhost:3000
