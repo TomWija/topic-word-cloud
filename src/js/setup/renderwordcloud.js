@@ -6,7 +6,7 @@ const TopicReader = require("../utilities/topicreader.js");
  * differently on every page load.
  */
 module.exports = (topics) => {
-    const $wordCloudColumn = $("#word-cloud"),
+    const wordCloudColumn = document.getElementById("word-cloud"),
         processedTopics = TopicReader.transformTopicObj(topics, "left");
 
     TopicReader.shuffle(processedTopics);
@@ -15,6 +15,6 @@ module.exports = (topics) => {
         // Format Label to keep spaced words on same level
         topic.label = topic.label.replace(/ /gi, "&nbsp;");
 
-        $wordCloudColumn.append(`<span class="${topic.fontSize} ${topic.sentimentOverall} word-cloud__topic" data-id="${topic.id}">${topic.label}</span> `);
+        wordCloudColumn.innerHTML += `<span class="${topic.fontSize} ${topic.sentimentOverall} word-cloud__topic" data-id="${topic.id}">${topic.label}</span> `;
     });
 };
