@@ -13,8 +13,8 @@ const gulp = require("gulp"),
 
 // Paths
 
-var resourcePath = "./htdocs/resources/public/",
-    compiledPath = resourcePath + "compiled/",
+var resourcePath = "./src/",
+    compiledPath = "./htdocs/public/",
     sassPath = resourcePath + "scss/",
     jsPath = resourcePath + "js/";
 
@@ -56,8 +56,8 @@ gulp.task("serve", ["build:js", "build:sass"], () => {
         server: "./htdocs"
     });
 
-    gulp.watch("htdocs/resources/public/scss/**/*.scss", ["build:sass"]);
-    gulp.watch("htdocs/resources/public/js/**/*.js", ["build:js"]);
+    gulp.watch("src/scss/**/*.scss", ["build:sass"]);
+    gulp.watch("src/js/**/*.js", ["build:js"]);
     gulp.watch("htdocs/*.html").on("change", browserSync.reload);
 });
 
