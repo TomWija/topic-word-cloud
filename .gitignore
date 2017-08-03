@@ -1,5 +1,5 @@
 # Dependency directories
 node_modules/
 
-htdocs/resources/public/compiled/css/
-htdocs/resources/public/compiled/js/
+htdocs/public/css/
+htdocs/public/js/

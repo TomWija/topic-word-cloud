@@ -1,8 +1,10 @@
 # Topic World Cloud
 
-Node Version: 8.1.4
+[![Build Status](https://travis-ci.org/TomWija/topic-word-cloud.svg?branch=master)](https://travis-ci.org/TomWija/topic-word-cloud)
 
-npm Version: 5.3.0
+Node | >= 8.0.0
+
+npm | >= 5.3.0
 
 # Installation
 
