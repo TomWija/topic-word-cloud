@@ -1,5 +1,8 @@
 # Topic World Cloud
 
+Node Version: 8.1.4
+npm Version: 5.3.0
+
 # Installation
 
 Begin by cloning the project to your local machine and navigating to the directory
