@@ -20,6 +20,6 @@
     "test": "mocha src/tests/*.js --require babel-register || true"
   },
   "dependencies": {
-    "jquery": "2.2.4"
+    "jquery": "3.1.0"
   }
 }

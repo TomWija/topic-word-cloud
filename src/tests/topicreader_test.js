@@ -2,11 +2,11 @@
 
 const expect = require("chai").expect,
     assert = require("chai").assert,
-    TopicReader = require("../../public/js/utilities/topic-reader.js"),
+    TopicReader = require("../js/utilities/topicreader.js"),
     testTopic1 = require("./test-resources/test-topic.json"),
     testTopic2 = require("./test-resources/test-topic2.json"),
     testTopics = require("./test-resources/test-topics.json"),
-    topics = require("../../public/js/topics/topics.json");
+    topics = require("../js/topics/topics.json");
 
 describe("TopicReader", () => {
     it("should exist", () => {

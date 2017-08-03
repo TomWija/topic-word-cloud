@@ -1,4 +1,4 @@
-const TopicReader = require("../utilities/topic-reader.js");
+const TopicReader = require("../utilities/topicreader.js");
 
 /**
  * Used to render the word cloud itself, assigning the relevant classes to the

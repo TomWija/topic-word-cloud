@@ -39,8 +39,7 @@ const TopicReader = {
     findTopicById: function(topics, id) {
         try {
             if(topics && id) {
-                let topic = $.grep(topics, (item) => item.id == id); //topics.find((item) => item.id == id);
-
+                let topic = topics.filter((item) => item.id == id);
                 if(topic.length) {
                     topic = topic[0];
                 } else {
